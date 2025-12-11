@@ -1,0 +1,66 @@
+﻿@inherits LayoutComponentBase
+@using FrontEnd.Services
+@inject IAuthService AuthService
+@inject NavigationManager NavigationManager
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            @if (AuthService.IsAuthenticated())
+            {
+                <div class="user-info">
+                    <span class="user-role">@AuthService.GetRole()</span>
+                    <a href="profile" class="user-link">
+                        <span class="bi bi-person-circle"></span> Profile
+                    </a>
+                </div>
+            }
+            else
+            {
+                <a href="login" class="login-link">Login</a>
+            }
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+<style>
+    .user-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .user-role {
+        background: #667eea;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .user-link, .login-link {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    .user-link:hover, .login-link:hover {
+        color: #764ba2;
+    }
+
+    .user-link .bi {
+        font-size: 18px;
+        margin-right: 5px;
+    }
+</style>

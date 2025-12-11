@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "projects": [],
+  "msbuildProperties": {},
+  "msbuildVerbosity": "quiet",
+  "excludeFolders": [
+    "wwwroot/uploads"
+  ],
+  "hotReloadProfile": "aspnetcore"
+}

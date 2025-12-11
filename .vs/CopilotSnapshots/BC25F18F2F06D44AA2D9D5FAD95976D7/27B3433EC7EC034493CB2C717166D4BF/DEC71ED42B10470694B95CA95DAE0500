@@ -1,0 +1,67 @@
+﻿using DataBase;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Project.DTO;
+using Project.Repositories;
+using System;
+
+namespace Project.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    [Authorize(Roles = "admin")]
+    public class CategoryController : ControllerBase
+    {
+        private readonly ICategoryRepository repository;
+        public CategoryController(ICategoryRepository repository)
+        {
+            this.repository = repository;
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetCategories()
+        {
+            return Ok(await repository.GetCategories());
+        }
+        [HttpGet("{name}")]
+        public async Task<IActionResult> GetCategoryByName(string name)
+        {
+            return Ok(await repository.GetCategoryByName(name));
+        }
+        [HttpPost]
+        public async Task<IActionResult> CreateCategory(Project.DTO.AddCategoryRequestDTO category)
+        {
+            var categories = await repository.GetCategories();
+            if (categories.Any(c => c.Name.Equals(category.Name, StringComparison.OrdinalIgnoreCase))) return BadRequest("Category with that name already exists");
+
+            var categoryToCreate = new Category
+            {
+                Name = category.Name
+            };
+
+            var newcat = await repository.CreateCategory(categoryToCreate);
+            return CreatedAtAction(nameof(GetCategoryByID), new { id = newcat.CategoryID }, newcat);
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCategory(int id)
+        {
+            var result = await repository.DeleteCategory(id);
+            if (result) return NoContent();
+            return NotFound("n'existe pas");
+        }
+        [HttpGet("id/{id:int}")]
+        public async Task<IActionResult> GetCategoryByID(int id)
+        {
+            var category = await repository.GetCategoryByID(id);
+            if (category == null) return NotFound("inexistant");
+            return Ok(category);
+        }
+        [HttpPut]
+        public async Task<IActionResult> UpdateCategory(Category category)
+        {
+            var result = await repository.UpdateCategory(category);
+            if (result) return Ok(result);
+            return NotFound("erreur");
+        }
+    }
+}

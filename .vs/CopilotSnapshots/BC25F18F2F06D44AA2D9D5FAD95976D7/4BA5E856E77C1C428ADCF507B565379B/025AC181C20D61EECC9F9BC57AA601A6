@@ -1,0 +1,552 @@
+﻿@page "/store"
+@using FrontEnd.Models
+@using FrontEnd.Services
+@inject ArticleService ArticleService
+@inject CategoryService CategoryService
+@inject CartService CartService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Our Menu</PageTitle>
+
+<div class="restaurant-container">
+    <div class="restaurant-hero">
+        <div class="hero-content">
+            <h1><i class="bi bi-egg-fried"></i> Our Delicious Menu</h1>
+            <p>Explore our curated selection of mouth-watering dishes</p>
+        </div>
+        
+        <div class="cart-badge" @onclick="GoToCart">
+            <i class="bi bi-cart3"></i>
+            <span class="cart-count">@CartService.GetItems().Count</span>
+        </div>
+    </div>
+
+    <div class="menu-content">
+        <!-- Category Filter Section -->
+        @if (categories != null && categories.Any())
+        {
+            <div class="filter-section">
+                <div class="filter-container">
+                    <label for="categoryFilter" class="filter-label">
+                        <i class="bi bi-funnel-fill"></i> Filter by Category:
+                    </label>
+                    <select id="categoryFilter" 
+                            class="category-select" 
+                            @bind="selectedCategoryId" 
+                            @bind:after="FilterArticles">
+                        <option value="0">All Categories</option>
+                        @foreach (var category in categories)
+                        {
+                            <option value="@category.CategoryID">@category.Name</option>
+                        }
+                    </select>
+                    <div class="results-count">
+                        Showing @filteredArticles?.Count() of @allArticles?.Count() dishes
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (isLoading)
+        {
+            <div class="loading-state">
+                <div class="spinner-border text-warning" role="status"></div>
+                <p>Loading menu...</p>
+            </div>
+        }
+        else if (filteredArticles == null || !filteredArticles.Any())
+        {
+            <div class="empty-menu">
+                <i class="bi bi-emoji-frown" style="font-size: 64px; color: #95a5a6;"></i>
+                @if (selectedCategoryId > 0)
+                {
+                    <p>No dishes available in this category</p>
+                    <button class="btn-reset" @onclick="ResetFilter">
+                        <i class="bi bi-arrow-counterclockwise"></i> Show All Dishes
+                    </button>
+                }
+                else
+                {
+                    <p>No dishes available at the moment</p>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="menu-grid">
+                @foreach (var article in filteredArticles)
+                {
+                    <div class="dish-card">
+                        <div class="dish-image">
+                            @if (!string.IsNullOrEmpty(article.ImageUrl))
+                            {
+                                <img src="@article.ImageUrl" alt="@article.Name" />
+                            }
+                            else
+                            {
+                                <div class="placeholder-dish">
+                                    <i class="bi bi-egg-fried"></i>
+                                </div>
+                            }
+                            @if (article.Category != null)
+                            {
+                                <span class="category-badge">@article.Category.Name</span>
+                            }
+                        </div>
+                        <div class="dish-details">
+                            <h4 class="dish-name">@article.Name</h4>
+                            <p class="dish-description">@article.Description</p>
+                            <div class="dish-footer">
+                                <span class="dish-price">$@article.Price.ToString("F2")</span>
+                                <button class="add-to-cart-btn" @onclick="() => AddToCart(article)">
+                                    <i class="bi bi-plus-circle"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .restaurant-container {
+        min-height: 100vh;
+        background: linear-gradient(to bottom, #fff5e6 0%, #ffffff 100%);
+        padding-bottom: 60px;
+    }
+
+    .restaurant-hero {
+        background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-content p {
+        font-size: 20px;
+        opacity: 0.95;
+    }
+
+    .cart-badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: white;
+        color: #e67e22;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s;
+        font-size: 24px;
+        position: relative;
+    }
+
+    .cart-badge:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .cart-count {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: #e74c3c;
+        color: white;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 700;
+        border: 3px solid white;
+    }
+
+    .menu-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 50px 20px;
+    }
+
+    /* Filter Section */
+    .filter-section {
+        margin-bottom: 40px;
+        animation: slideDown 0.3s ease-out;
+    }
+
+    @@keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .filter-container {
+        background: white;
+        padding: 25px 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .filter-label {
+        font-size: 16px;
+        font-weight: 600;
+        color: #2c3e50;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0;
+    }
+
+    .filter-label i {
+        color: #e67e22;
+        font-size: 18px;
+    }
+
+    .category-select {
+        flex: 1;
+        min-width: 200px;
+        padding: 12px 20px;
+        border: 2px solid #ecf0f1;
+        border-radius: 30px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #2c3e50;
+        background: white;
+        cursor: pointer;
+        transition: all 0.3s;
+        outline: none;
+    }
+
+    .category-select:hover {
+        border-color: #e67e22;
+    }
+
+    .category-select:focus {
+        border-color: #e67e22;
+        box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+    }
+
+    .results-count {
+        font-size: 14px;
+        color: #7f8c8d;
+        font-weight: 500;
+        padding: 8px 16px;
+        background: #f8f9fa;
+        border-radius: 20px;
+    }
+
+    .loading-state, .empty-menu {
+        text-align: center;
+        padding: 80px 20px;
+        color: #7f8c8d;
+    }
+
+    .loading-state .spinner-border {
+        width: 4rem;
+        height: 4rem;
+        margin-bottom: 20px;
+    }
+
+    .empty-menu i {
+        margin-bottom: 20px;
+    }
+
+    .empty-menu p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .btn-reset {
+        background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+        color: white;
+        border: none;
+        padding: 12px 28px;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-reset:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+    }
+
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 30px;
+        animation: fadeIn 0.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .dish-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dish-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 25px rgba(230, 126, 34, 0.2);
+    }
+
+    .dish-image {
+        height: 220px;
+        overflow: hidden;
+        position: relative;
+        background: #f8f9fa;
+    }
+
+    .dish-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s;
+    }
+
+    .dish-card:hover .dish-image img {
+        transform: scale(1.1);
+    }
+
+    .placeholder-dish {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+        color: #e67e22;
+        font-size: 80px;
+    }
+
+    .category-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: rgba(230, 126, 34, 0.95);
+        color: white;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        backdrop-filter: blur(10px);
+    }
+
+    .dish-details {
+        padding: 25px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dish-name {
+        font-size: 22px;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 12px;
+        line-height: 1.3;
+    }
+
+    .dish-description {
+        color: #7f8c8d;
+        font-size: 15px;
+        line-height: 1.6;
+        flex-grow: 1;
+        margin-bottom: 20px;
+    }
+
+    .dish-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+        border-top: 2px solid #ecf0f1;
+    }
+
+    .dish-price {
+        font-size: 28px;
+        font-weight: 700;
+        color: #e67e22;
+    }
+
+    .add-to-cart-btn {
+        background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .add-to-cart-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+    }
+
+    .add-to-cart-btn:active {
+        transform: translateY(0);
+    }
+
+    @@media (max-width: 768px) {
+        .hero-content h1 {
+            font-size: 32px;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+        }
+
+        .filter-container {
+            flex-direction: column;
+            align-items: stretch;
+            padding: 20px;
+        }
+
+        .filter-label {
+            justify-content: center;
+        }
+
+        .category-select {
+            min-width: 100%;
+        }
+
+        .results-count {
+            text-align: center;
+        }
+
+        .menu-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .cart-badge {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+    }
+</style>
+
+@code {
+    private List<Article>? allArticles;
+    private List<Article>? filteredArticles;
+    private List<Category>? categories;
+    private int selectedCategoryId = 0;
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Load categories and articles in parallel
+            var categoriesTask = CategoryService.GetCategories();
+            var articlesTask = ArticleService.GetArticles();
+
+            await Task.WhenAll(categoriesTask, articlesTask);
+
+            categories = await categoriesTask;
+            allArticles = await articlesTask;
+            
+            // Initially show all articles
+            filteredArticles = allArticles;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading data: {ex.Message}");
+            categories = new List<Category>();
+            allArticles = new List<Article>();
+            filteredArticles = new List<Article>();
+        }
+        finally
+        {
+            isLoading = false;
+        }
+
+        CartService.OnChange += StateHasChanged;
+    }
+
+    private void FilterArticles()
+    {
+        if (selectedCategoryId == 0)
+        {
+            // Show all articles
+            filteredArticles = allArticles;
+        }
+        else
+        {
+            // Filter by selected category
+            filteredArticles = allArticles?.Where(a => a.CategoryID == selectedCategoryId).ToList();
+        }
+        
+        StateHasChanged();
+    }
+
+    private void ResetFilter()
+    {
+        selectedCategoryId = 0;
+        FilterArticles();
+    }
+
+    private void AddToCart(Article article)
+    {
+        CartService.AddToCart(article);
+    }
+
+    private void GoToCart()
+    {
+        NavigationManager.NavigateTo("/store/cart");
+    }
+
+    public void Dispose()
+    {
+        CartService.OnChange -= StateHasChanged;
+    }
+}

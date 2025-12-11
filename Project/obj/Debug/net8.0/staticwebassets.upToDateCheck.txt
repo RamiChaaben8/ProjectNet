@@ -1,0 +1,8 @@
+wwwroot\uploads\articles\.gitkeep
+wwwroot\uploads\articles\4d7dd262-03cb-4508-92ac-b8787cd5955c.png
+wwwroot\uploads\articles\4e206df9-f327-42c5-8627-5c699a8885ac.png
+wwwroot\uploads\articles\5574f1e0-0505-4097-9e04-fec62887cd54.jpg
+wwwroot\uploads\articles\7bb64948-dbfb-46d6-a5fe-933ed2b41ccc.png
+wwwroot\uploads\articles\8d7926b2-6e02-4e07-8dfb-6bdfc62052d0.png
+wwwroot\uploads\articles\a9c6a658-b068-4fc3-a9a2-d0b5c9b0bd58.jpg
+wwwroot\uploads\articles\aa034c34-3698-4116-9d31-5ee087c8432d.png

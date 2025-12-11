@@ -1,0 +1,70 @@
+C:\Users\ramic\OneDrive\Documents\.net\Project\DataBase\bin\Debug\net8.0\DataBase.deps.json
+C:\Users\ramic\OneDrive\Documents\.net\Project\DataBase\bin\Debug\net8.0\DataBase.dll
+C:\Users\ramic\OneDrive\Documents\.net\Project\DataBase\bin\Debug\net8.0\DataBase.pdb
+C:\Users\ramic\OneDrive\Documents\.net\Project\DataBase\obj\Debug\net8.0\DataBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ramic\OneDrive\Documents\.net\Project\DataBase\obj\Debug\net8.0\DataBase.AssemblyInfoInputs.cache
+C:\Users\ramic\OneDrive\Documents\.net\Project\DataBase\obj\Debug\net8.0\DataBase.AssemblyInfo.cs
+C:\Users\ramic\OneDrive\Documents\.net\Project\DataBase\obj\Debug\net8.0\DataBase.csproj.CoreCompileInputs.cache
+C:\Users\ramic\OneDrive\Documents\.net\Project\DataBase\obj\Debug\net8.0\DataBase.dll
+C:\Users\ramic\OneDrive\Documents\.net\Project\DataBase\obj\Debug\net8.0\refint\DataBase.dll
+C:\Users\ramic\OneDrive\Documents\.net\Project\DataBase\obj\Debug\net8.0\DataBase.pdb
+C:\Users\ramic\OneDrive\Documents\.net\Project\DataBase\obj\Debug\net8.0\ref\DataBase.dll
+C:\Users\ramic\OneDrive\Documents\.net\Project\DataBase\obj\Debug\net8.0\DataBase.sourcelink.json
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\Projectttt223\DataBase\bin\Debug\net8.0\DataBase.deps.json
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\Projectttt223\DataBase\bin\Debug\net8.0\DataBase.dll
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\Projectttt223\DataBase\bin\Debug\net8.0\DataBase.pdb
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\Projectttt223\DataBase\obj\Debug\net8.0\DataBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\Projectttt223\DataBase\obj\Debug\net8.0\DataBase.AssemblyInfoInputs.cache
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\Projectttt223\DataBase\obj\Debug\net8.0\DataBase.AssemblyInfo.cs
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\Projectttt223\DataBase\obj\Debug\net8.0\DataBase.csproj.CoreCompileInputs.cache
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\Projectttt223\DataBase\obj\Debug\net8.0\DataBase.sourcelink.json
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\Projectttt223\DataBase\obj\Debug\net8.0\DataBase.dll
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\Projectttt223\DataBase\obj\Debug\net8.0\refint\DataBase.dll
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\Projectttt223\DataBase\obj\Debug\net8.0\DataBase.pdb
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\Projectttt223\DataBase\obj\Debug\net8.0\ref\DataBase.dll
+C:\Users\Lenovo\Desktop\c#\Projectttt223\DataBase\bin\Debug\net8.0\DataBase.deps.json
+C:\Users\Lenovo\Desktop\c#\Projectttt223\DataBase\bin\Debug\net8.0\DataBase.dll
+C:\Users\Lenovo\Desktop\c#\Projectttt223\DataBase\bin\Debug\net8.0\DataBase.pdb
+C:\Users\Lenovo\Desktop\c#\Projectttt223\DataBase\obj\Debug\net8.0\DataBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Desktop\c#\Projectttt223\DataBase\obj\Debug\net8.0\DataBase.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\c#\Projectttt223\DataBase\obj\Debug\net8.0\DataBase.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\c#\Projectttt223\DataBase\obj\Debug\net8.0\DataBase.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\c#\Projectttt223\DataBase\obj\Debug\net8.0\DataBase.sourcelink.json
+C:\Users\Lenovo\Desktop\c#\Projectttt223\DataBase\obj\Debug\net8.0\DataBase.dll
+C:\Users\Lenovo\Desktop\c#\Projectttt223\DataBase\obj\Debug\net8.0\refint\DataBase.dll
+C:\Users\Lenovo\Desktop\c#\Projectttt223\DataBase\obj\Debug\net8.0\DataBase.pdb
+C:\Users\Lenovo\Desktop\c#\Projectttt223\DataBase\obj\Debug\net8.0\ref\DataBase.dll
+C:\Users\ramic\OneDrive\Documents\.net\ProjectNet\projectCs2\DataBase\bin\Debug\net8.0\DataBase.deps.json
+C:\Users\ramic\OneDrive\Documents\.net\ProjectNet\projectCs2\DataBase\bin\Debug\net8.0\DataBase.dll
+C:\Users\ramic\OneDrive\Documents\.net\ProjectNet\projectCs2\DataBase\bin\Debug\net8.0\DataBase.pdb
+C:\Users\ramic\OneDrive\Documents\.net\ProjectNet\projectCs2\DataBase\obj\Debug\net8.0\DataBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ramic\OneDrive\Documents\.net\ProjectNet\projectCs2\DataBase\obj\Debug\net8.0\DataBase.AssemblyInfoInputs.cache
+C:\Users\ramic\OneDrive\Documents\.net\ProjectNet\projectCs2\DataBase\obj\Debug\net8.0\DataBase.AssemblyInfo.cs
+C:\Users\ramic\OneDrive\Documents\.net\ProjectNet\projectCs2\DataBase\obj\Debug\net8.0\DataBase.csproj.CoreCompileInputs.cache
+C:\Users\ramic\OneDrive\Documents\.net\ProjectNet\projectCs2\DataBase\obj\Debug\net8.0\DataBase.sourcelink.json
+C:\Users\ramic\OneDrive\Documents\.net\ProjectNet\projectCs2\DataBase\obj\Debug\net8.0\DataBase.dll
+C:\Users\ramic\OneDrive\Documents\.net\ProjectNet\projectCs2\DataBase\obj\Debug\net8.0\refint\DataBase.dll
+C:\Users\ramic\OneDrive\Documents\.net\ProjectNet\projectCs2\DataBase\obj\Debug\net8.0\DataBase.pdb
+C:\Users\ramic\OneDrive\Documents\.net\ProjectNet\projectCs2\DataBase\obj\Debug\net8.0\ref\DataBase.dll
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\DataBase\bin\Debug\net8.0\DataBase.deps.json
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\DataBase\bin\Debug\net8.0\DataBase.dll
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\DataBase\bin\Debug\net8.0\DataBase.pdb
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\DataBase\obj\Debug\net8.0\DataBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\DataBase\obj\Debug\net8.0\DataBase.AssemblyInfoInputs.cache
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\DataBase\obj\Debug\net8.0\DataBase.AssemblyInfo.cs
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\DataBase\obj\Debug\net8.0\DataBase.csproj.CoreCompileInputs.cache
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\DataBase\obj\Debug\net8.0\DataBase.dll
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\DataBase\obj\Debug\net8.0\refint\DataBase.dll
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\DataBase\obj\Debug\net8.0\DataBase.pdb
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\DataBase\obj\Debug\net8.0\ref\DataBase.dll
+C:\Users\Lenovo\Downloads\projectCs2-main (1)\projectCs2-main\DataBase\bin\Debug\net8.0\DataBase.deps.json
+C:\Users\Lenovo\Downloads\projectCs2-main (1)\projectCs2-main\DataBase\bin\Debug\net8.0\DataBase.dll
+C:\Users\Lenovo\Downloads\projectCs2-main (1)\projectCs2-main\DataBase\bin\Debug\net8.0\DataBase.pdb
+C:\Users\Lenovo\Downloads\projectCs2-main (1)\projectCs2-main\DataBase\obj\Debug\net8.0\DataBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\projectCs2-main (1)\projectCs2-main\DataBase\obj\Debug\net8.0\DataBase.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\projectCs2-main (1)\projectCs2-main\DataBase\obj\Debug\net8.0\DataBase.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\projectCs2-main (1)\projectCs2-main\DataBase\obj\Debug\net8.0\DataBase.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\projectCs2-main (1)\projectCs2-main\DataBase\obj\Debug\net8.0\DataBase.dll
+C:\Users\Lenovo\Downloads\projectCs2-main (1)\projectCs2-main\DataBase\obj\Debug\net8.0\refint\DataBase.dll
+C:\Users\Lenovo\Downloads\projectCs2-main (1)\projectCs2-main\DataBase\obj\Debug\net8.0\DataBase.pdb
+C:\Users\Lenovo\Downloads\projectCs2-main (1)\projectCs2-main\DataBase\obj\Debug\net8.0\ref\DataBase.dll

@@ -1,0 +1,82 @@
+﻿@page "/admin/orders"
+@using FrontEnd.Models
+@using FrontEnd.Services
+@inject OrderService OrderService
+@inject NavigationManager NavigationManager
+@attribute [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Admin")]
+
+<h3>Transactions</h3>
+
+@if (orders == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Client</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in orders)
+            {
+                <tr>
+                    <td>@order.OrderID</td>
+                    <td>@order.OrderDate.ToShortDateString()</td>
+                    <td>@(order.ClientID)</td> <!-- Accessing Client name would require including Client in fetch -->
+                    <td>@order.TotalPrice $</td>
+                    <td>
+                         <select @onchange="@(e => UpdateStatus(order.OrderID, e.Value.ToString()))" value="@order.Status" class="form-select">
+                            <option value="Pending">Pending</option>
+                            <option value="Processing">Processing</option>
+                            <option value="Shipped">Shipped</option>
+                            <option value="Delivered">Delivered</option>
+                            <option value="Cancelled">Cancelled</option>
+                        </select>
+                    </td>
+                    <td>
+                        <!-- Details button could go here -->
+                         <span class="text-muted">Updated via dropdown</span>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Order> orders;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try 
+        {
+            orders = await OrderService.GetAllOrders();
+        }
+        catch (Exception ex)
+        {
+             Console.WriteLine($"Error fetching orders: {ex.Message}");
+        }
+    }
+
+    private async Task UpdateStatus(int orderId, string newStatus)
+    {
+        var result = await OrderService.UpdateOrderStatus(orderId, newStatus);
+        if (result == null)
+        {
+             // Success
+             // Opt: Refresh list or show toast
+        }
+        else
+        {
+            Console.WriteLine($"Error updating status: {result}");
+        }
+    }
+}

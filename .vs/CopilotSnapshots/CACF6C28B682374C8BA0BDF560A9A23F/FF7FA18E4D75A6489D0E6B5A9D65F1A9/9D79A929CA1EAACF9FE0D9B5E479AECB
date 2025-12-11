@@ -1,0 +1,188 @@
+﻿@page "/store"
+@using FrontEnd.Models
+@using FrontEnd.Services
+@inject ArticleService ArticleService
+@inject CartService CartService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Store</PageTitle>
+
+<div class="store-container">
+    <div class="store-header">
+        <h1>Welcome to the Store</h1>
+        <p>Browse our products and make your purchases</p>
+        
+        <div class="cart-summary" @onclick="GoToCart">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-count">@CartService.GetItems().Count</span>
+        </div>
+    </div>
+
+    <div class="store-content">
+        @if (articles == null)
+        {
+            <p>Loading articles...</p>
+        }
+        else if (!articles.Any())
+        {
+            <p>No articles found.</p>
+        }
+        else
+        {
+            <div class="articles-grid">
+                @foreach (var article in articles)
+                {
+                    <div class="article-card">
+                        <div class="article-image">
+                            <!-- Placeholder for image if available -->
+                            <div class="placeholder-icon">📦</div>
+                        </div>
+                        <div class="article-details">
+                            <h4>@article.Name</h4>
+                            <p class="description">@article.Description</p>
+                            <p class="price">@article.Price $</p>
+                            <button class="add-btn" @onclick="() => AddToCart(article)">Add to Cart</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .store-container {
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .store-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    .cart-summary {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #ff6b6b;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 25px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: transform 0.2s;
+    }
+
+    .cart-summary:hover {
+        transform: scale(1.05);
+    }
+
+    .cart-count {
+        font-weight: bold;
+    }
+
+    .articles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    .article-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .article-image {
+        height: 150px;
+        background-color: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .placeholder-icon {
+        font-size: 48px;
+    }
+
+    .article-details {
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-details h4 {
+        margin: 0 0 10px;
+        font-size: 18px;
+    }
+
+    .description {
+        color: #666;
+        font-size: 14px;
+        flex-grow: 1;
+        margin-bottom: 15px;
+    }
+
+    .price {
+        font-size: 20px;
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 15px;
+    }
+
+    .add-btn {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    .add-btn:hover {
+        background-color: #45a049;
+    }
+</style>
+
+@code {
+    private List<Article>? articles;
+
+    protected override async Task OnInitializedAsync()
+    {
+        articles = await ArticleService.GetArticles();
+        CartService.OnChange += StateHasChanged;
+    }
+
+    private void AddToCart(Article article)
+    {
+        CartService.AddToCart(article);
+    }
+
+    private void GoToCart()
+    {
+        NavigationManager.NavigateTo("/store/cart");
+    }
+
+    public void Dispose()
+    {
+        CartService.OnChange -= StateHasChanged;
+    }
+}

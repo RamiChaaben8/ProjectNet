@@ -1,0 +1,386 @@
+@page "/profile"
+@using FrontEnd.Models
+@using FrontEnd.Services
+@inject OrderService OrderService
+@inject IAuthService AuthService
+@inject NavigationManager NavigationManager
+@attribute [Microsoft.AspNetCore.Authorization.Authorize]
+
+<PageTitle>My Profile</PageTitle>
+
+<div class="profile-container">
+    <div class="profile-header">
+        <h2>My Profile</h2>
+        <p class="user-email">@userEmail</p>
+    </div>
+
+    <div class="profile-content">
+        <div class="section">
+            <h3>My Orders</h3>
+            
+            @if (errorMessage != null)
+            {
+                <div class="alert alert-danger">@errorMessage</div>
+            }
+
+            @if (orders == null)
+            {
+                <p><em>Loading orders...</em></p>
+            }
+            else if (!orders.Any())
+            {
+                <div class="empty-state">
+                    <i class="bi bi-bag-x" style="font-size: 48px; color: #ccc;"></i>
+                    <p>You haven't placed any orders yet.</p>
+                    <button class="btn btn-primary" @onclick="GoToStore">Start Shopping</button>
+                </div>
+            }
+            else
+            {
+                <div class="orders-tabs">
+                    <button class="tab-button @(currentTab == "all" ? "active" : "")" @onclick='() => currentTab = "all"'>
+                        All (@orders.Count)
+                    </button>
+                    <button class="tab-button @(currentTab == "pending" ? "active" : "")" @onclick='() => currentTab = "pending"'>
+                        Pending (@orders.Count(o => o.Status == "Pending"))
+                    </button>
+                    <button class="tab-button @(currentTab == "accepted" ? "active" : "")" @onclick='() => currentTab = "accepted"'>
+                        Accepted (@orders.Count(o => o.Status == "Accepted"))
+                    </button>
+                    <button class="tab-button @(currentTab == "declined" ? "active" : "")" @onclick='() => currentTab = "declined"'>
+                        Declined (@orders.Count(o => o.Status == "Declined"))
+                    </button>
+                </div>
+
+                <div class="orders-list">
+                    @foreach (var order in FilteredOrders)
+                    {
+                        <div class="order-card">
+                            <div class="order-header">
+                                <div>
+                                    <h4>Order #@order.OrderID</h4>
+                                    <p class="order-date">@order.OrderDate.ToString("MMM dd, yyyy")</p>
+                                </div>
+                                <div>
+                                    @if (order.Status == "Pending")
+                                    {
+                                        <span class="badge badge-warning">? @order.Status</span>
+                                    }
+                                    else if (order.Status == "Accepted")
+                                    {
+                                        <span class="badge badge-success">? @order.Status</span>
+                                    }
+                                    else if (order.Status == "Declined")
+                                    {
+                                        <span class="badge badge-danger">? @order.Status</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge badge-secondary">@order.Status</span>
+                                    }
+                                </div>
+                            </div>
+                            
+                            <div class="order-body">
+                                <div class="order-items">
+                                    <strong>Items:</strong>
+                                    @if (order.Receipt != null && order.Receipt.Any())
+                                    {
+                                        <ul class="items-list">
+                                            @foreach (var item in order.Receipt)
+                                            {
+                                                <li>@item.Name - $@item.Price.ToString("F2")</li>
+                                            }
+                                        </ul>
+                                    }
+                                    else
+                                    {
+                                        <p class="text-muted">No items</p>
+                                    }
+                                </div>
+                                
+                                <div class="order-total">
+                                    <strong>Total: $@order.TotalPrice.ToString("F2")</strong>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .profile-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .profile-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-header h2 {
+        margin: 0 0 10px 0;
+        font-size: 28px;
+    }
+
+    .user-email {
+        margin: 0;
+        opacity: 0.9;
+        font-size: 16px;
+    }
+
+    .section {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h3 {
+        margin-top: 0;
+        color: #333;
+        border-bottom: 2px solid #667eea;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 60px 20px;
+        color: #666;
+    }
+
+    .empty-state p {
+        margin: 20px 0;
+        font-size: 18px;
+    }
+
+    .orders-tabs {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+
+    .tab-button {
+        padding: 10px 20px;
+        border: 2px solid #667eea;
+        background: white;
+        color: #667eea;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s;
+    }
+
+    .tab-button:hover {
+        background: #f0f4ff;
+    }
+
+    .tab-button.active {
+        background: #667eea;
+        color: white;
+    }
+
+    .orders-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .order-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: box-shadow 0.3s;
+    }
+
+    .order-card:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .order-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background: #f8f9fa;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .order-header h4 {
+        margin: 0;
+        color: #333;
+        font-size: 18px;
+    }
+
+    .order-date {
+        margin: 5px 0 0 0;
+        color: #666;
+        font-size: 14px;
+    }
+
+    .badge {
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .badge-warning {
+        background: #fff3cd;
+        color: #856404;
+    }
+
+    .badge-success {
+        background: #d4edda;
+        color: #155724;
+    }
+
+    .badge-danger {
+        background: #f8d7da;
+        color: #721c24;
+    }
+
+    .badge-secondary {
+        background: #e2e3e5;
+        color: #383d41;
+    }
+
+    .order-body {
+        padding: 20px;
+    }
+
+    .order-items {
+        margin-bottom: 15px;
+    }
+
+    .items-list {
+        margin: 10px 0;
+        padding-left: 20px;
+        list-style: none;
+    }
+
+    .items-list li {
+        padding: 5px 0;
+        color: #555;
+    }
+
+    .items-list li:before {
+        content: "• ";
+        color: #667eea;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .order-total {
+        text-align: right;
+        font-size: 18px;
+        color: #333;
+        padding-top: 15px;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    .alert {
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .alert-danger {
+        background: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+
+    @@media (max-width: 768px) {
+        .profile-container {
+            padding: 10px;
+        }
+
+        .order-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .orders-tabs {
+            flex-direction: column;
+        }
+
+        .tab-button {
+            width: 100%;
+        }
+    }
+</style>
+
+@code {
+    private List<Order> orders;
+    private string errorMessage;
+    private string userEmail;
+    private string currentTab = "all";
+
+    private List<Order> FilteredOrders
+    {
+        get
+        {
+            if (orders == null) return new List<Order>();
+
+            return currentTab switch
+            {
+                "pending" => orders.Where(o => o.Status == "Pending").OrderByDescending(o => o.OrderDate).ToList(),
+                "accepted" => orders.Where(o => o.Status == "Accepted").OrderByDescending(o => o.OrderDate).ToList(),
+                "declined" => orders.Where(o => o.Status == "Declined").OrderByDescending(o => o.OrderDate).ToList(),
+                _ => orders.OrderByDescending(o => o.OrderDate).ToList()
+            };
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!AuthService.IsAuthenticated())
+        {
+            NavigationManager.NavigateTo("/login");
+            return;
+        }
+
+        userEmail = "Loading...";
+        await LoadOrders();
+    }
+
+    private async Task LoadOrders()
+    {
+        try
+        {
+            orders = await OrderService.GetMyOrders();
+            if (orders != null && orders.Any())
+            {
+                userEmail = orders.First().ClientEmail ?? "User";
+            }
+            else
+            {
+                userEmail = "User";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading orders: {ex.Message}";
+            userEmail = "User";
+            Console.WriteLine(errorMessage);
+        }
+    }
+
+    private void GoToStore()
+    {
+        NavigationManager.NavigateTo("/store");
+    }
+}

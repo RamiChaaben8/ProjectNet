@@ -1,0 +1,1059 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E567562A-60DF-43F1-B0D1-492A9548F32E}|DataBase\\DataBase.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\database\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E567562A-60DF-43F1-B0D1-492A9548F32E}|DataBase\\DataBase.csproj|solutionrelative:database\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E567562A-60DF-43F1-B0D1-492A9548F32E}|DataBase\\DataBase.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\database\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E567562A-60DF-43F1-B0D1-492A9548F32E}|DataBase\\DataBase.csproj|solutionrelative:database\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramic\\AppData\\Local\\Temp\\.vsdbgsrc\\44aa595dc2a1078aa662bebf92f46ec0aa83d37961bfc5ec1f12f1b995219153\\AddressBinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\pages\\admin\\edituser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\pages\\admin\\edituser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\pages\\admin\\adduser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\pages\\admin\\adduser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\pages\\admin\\users.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\pages\\admin\\users.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\dto\\loginresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\dto\\loginresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\dto\\signupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\dto\\signupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\models\\signupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\models\\signupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\dto\\orderresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\dto\\orderresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\pages\\admin\\orderspending.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\pages\\admin\\orderspending.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\pages\\admin\\ordersdone.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\pages\\admin\\ordersdone.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\pages\\admin\\ordersdeclined.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\pages\\admin\\ordersdeclined.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\pages\\admin\\orders.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\pages\\admin\\orders.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\pages\\profile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\pages\\profile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E567562A-60DF-43F1-B0D1-492A9548F32E}|DataBase\\DataBase.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\database\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E567562A-60DF-43F1-B0D1-492A9548F32E}|DataBase\\DataBase.csproj|solutionrelative:database\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\pages\\admin\\addarticle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\pages\\admin\\addarticle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\models\\addarticledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\models\\addarticledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\pages\\store.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\pages\\store.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\migrations\\20251211163839_addimageurltoarticlesafe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\migrations\\20251211163839_addimageurltoarticlesafe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\controllers\\imageuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\controllers\\imageuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\services\\imageuploadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\services\\imageuploadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\pages\\admin\\editarticle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\pages\\admin\\editarticle.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\frontend\\services\\customauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93E21794-5FF1-4055-BD62-4537AE707A13}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\services\\customauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\wwwroot\\uploads\\articles\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\wwwroot\\uploads\\articles\\.gitkeep||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\.watchignore||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\.watchignore||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\dotnet-watch.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\dotnet-watch.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\project.csproj.backup||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\project.csproj.backup||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\IMAGE_UPLOAD_FIX_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:IMAGE_UPLOAD_FIX_SUMMARY.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\restart-clean.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}|",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\restart-clean.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\HOME_PAGE_CATEGORY_FILTER.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HOME_PAGE_CATEGORY_FILTER.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\HOME_PAGE_VISUAL_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HOME_PAGE_VISUAL_GUIDE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\HOME_PAGE_QUICK_REFERENCE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HOME_PAGE_QUICK_REFERENCE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\HOME_PAGE_IMPLEMENTATION_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HOME_PAGE_IMPLEMENTATION_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\HOME_PAGE_DEMO_WALKTHROUGH.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HOME_PAGE_DEMO_WALKTHROUGH.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\STORE_PAGE_CATEGORY_FILTER.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:STORE_PAGE_CATEGORY_FILTER.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\STORE_PAGE_VISUAL_DEMO.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:STORE_PAGE_VISUAL_DEMO.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\TROUBLESHOOTING_CATEGORY_FILTER.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TROUBLESHOOTING_CATEGORY_FILTER.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|c:\\users\\ramic\\onedrive\\documents\\xuanzhi9\\projectcs2-main\\project\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B14AE724-A6F0-4C6D-BECB-614B6BC74FB2}|Project\\Project.csproj|solutionrelative:project\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\CATEGORY_FILTER_FIX.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CATEGORY_FILTER_FIX.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "CATEGORY_FILTER_FIX.md",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\CATEGORY_FILTER_FIX.md",
+              "RelativeDocumentMoniker": "CATEGORY_FILTER_FIX.md",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\CATEGORY_FILTER_FIX.md",
+              "RelativeToolTip": "CATEGORY_FILTER_FIX.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-11T18:00:35.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "Project\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "Project\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAEBVwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T17:59:24.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "TROUBLESHOOTING_CATEGORY_FILTER.md",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\TROUBLESHOOTING_CATEGORY_FILTER.md",
+              "RelativeDocumentMoniker": "TROUBLESHOOTING_CATEGORY_FILTER.md",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\TROUBLESHOOTING_CATEGORY_FILTER.md",
+              "RelativeToolTip": "TROUBLESHOOTING_CATEGORY_FILTER.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-11T17:58:40.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "HOME_PAGE_QUICK_REFERENCE.md",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\HOME_PAGE_QUICK_REFERENCE.md",
+              "RelativeDocumentMoniker": "HOME_PAGE_QUICK_REFERENCE.md",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\HOME_PAGE_QUICK_REFERENCE.md",
+              "RelativeToolTip": "HOME_PAGE_QUICK_REFERENCE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-11T17:43:04.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "HOME_PAGE_VISUAL_GUIDE.md",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\HOME_PAGE_VISUAL_GUIDE.md",
+              "RelativeDocumentMoniker": "HOME_PAGE_VISUAL_GUIDE.md",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\HOME_PAGE_VISUAL_GUIDE.md",
+              "RelativeToolTip": "HOME_PAGE_VISUAL_GUIDE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-11T17:42:28.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "HOME_PAGE_CATEGORY_FILTER.md",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\HOME_PAGE_CATEGORY_FILTER.md",
+              "RelativeDocumentMoniker": "HOME_PAGE_CATEGORY_FILTER.md",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\HOME_PAGE_CATEGORY_FILTER.md",
+              "RelativeToolTip": "HOME_PAGE_CATEGORY_FILTER.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-11T17:41:42.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Program.cs",
+              "RelativeDocumentMoniker": "Project\\Program.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Program.cs",
+              "RelativeToolTip": "Project\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAlwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T18:44:37.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "STORE_PAGE_VISUAL_DEMO.md",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\STORE_PAGE_VISUAL_DEMO.md",
+              "RelativeDocumentMoniker": "STORE_PAGE_VISUAL_DEMO.md",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\STORE_PAGE_VISUAL_DEMO.md",
+              "RelativeToolTip": "STORE_PAGE_VISUAL_DEMO.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-11T17:54:46.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Article.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\DataBase\\Article.cs",
+              "RelativeDocumentMoniker": "DataBase\\Article.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\DataBase\\Article.cs",
+              "RelativeToolTip": "DataBase\\Article.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAEBUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:28:45.092Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "HOME_PAGE_IMPLEMENTATION_COMPLETE.md",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\HOME_PAGE_IMPLEMENTATION_COMPLETE.md",
+              "RelativeDocumentMoniker": "HOME_PAGE_IMPLEMENTATION_COMPLETE.md",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\HOME_PAGE_IMPLEMENTATION_COMPLETE.md",
+              "RelativeToolTip": "HOME_PAGE_IMPLEMENTATION_COMPLETE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-11T17:44:02.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "STORE_PAGE_CATEGORY_FILTER.md",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\STORE_PAGE_CATEGORY_FILTER.md",
+              "RelativeDocumentMoniker": "STORE_PAGE_CATEGORY_FILTER.md",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\STORE_PAGE_CATEGORY_FILTER.md",
+              "RelativeToolTip": "STORE_PAGE_CATEGORY_FILTER.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-11T17:53:39.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "HOME_PAGE_DEMO_WALKTHROUGH.md",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\HOME_PAGE_DEMO_WALKTHROUGH.md",
+              "RelativeDocumentMoniker": "HOME_PAGE_DEMO_WALKTHROUGH.md",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\HOME_PAGE_DEMO_WALKTHROUGH.md",
+              "RelativeToolTip": "HOME_PAGE_DEMO_WALKTHROUGH.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEACAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-11T17:45:34.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "FrontEnd\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Services\\OrderService.cs",
+              "RelativeToolTip": "FrontEnd\\Services\\OrderService.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:20:39.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "OrdersPending.razor",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\OrdersPending.razor",
+              "RelativeDocumentMoniker": "FrontEnd\\Pages\\Admin\\OrdersPending.razor",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\OrdersPending.razor",
+              "RelativeToolTip": "FrontEnd\\Pages\\Admin\\OrdersPending.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T16:11:43.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ImageUploadController.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Controllers\\ImageUploadController.cs",
+              "RelativeDocumentMoniker": "Project\\Controllers\\ImageUploadController.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Controllers\\ImageUploadController.cs",
+              "RelativeToolTip": "Project\\Controllers\\ImageUploadController.cs",
+              "ViewState": "AgIAANkAAAAAAAAAAEBVwN0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:53:52.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Project\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Project\\Properties\\launchSettings.json",
+              "ViewState": "AgIAACEAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-11T17:25:13.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "FrontEnd\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Models\\Order.cs",
+              "RelativeToolTip": "FrontEnd\\Models\\Order.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAEBUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:11:27.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Project.csproj.backup",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Project.csproj.backup",
+              "RelativeDocumentMoniker": "Project\\Project.csproj.backup",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Project.csproj.backup",
+              "RelativeToolTip": "Project\\Project.csproj.backup",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-11T17:25:51.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "IMAGE_UPLOAD_FIX_SUMMARY.md",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\IMAGE_UPLOAD_FIX_SUMMARY.md",
+              "RelativeDocumentMoniker": "IMAGE_UPLOAD_FIX_SUMMARY.md",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\IMAGE_UPLOAD_FIX_SUMMARY.md",
+              "RelativeToolTip": "IMAGE_UPLOAD_FIX_SUMMARY.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAK8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-11T17:27:31.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "restart-clean.ps1",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\restart-clean.ps1",
+              "RelativeDocumentMoniker": "Project\\restart-clean.ps1",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\restart-clean.ps1",
+              "RelativeToolTip": "Project\\restart-clean.ps1",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-11T17:27:52.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "Project\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "Project\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAKwAAAAAAAAAAEBVwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:11:17.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "OrderResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\DTO\\OrderResponseDTO.cs",
+              "RelativeDocumentMoniker": "Project\\DTO\\OrderResponseDTO.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\DTO\\OrderResponseDTO.cs",
+              "RelativeToolTip": "Project\\DTO\\OrderResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:11:01.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": ".watchignore",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\.watchignore",
+              "RelativeDocumentMoniker": "Project\\.watchignore",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\.watchignore",
+              "RelativeToolTip": "Project\\.watchignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-11T17:17:32.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "dotnet-watch.json",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\dotnet-watch.json",
+              "RelativeDocumentMoniker": "Project\\dotnet-watch.json",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\dotnet-watch.json",
+              "RelativeToolTip": "Project\\dotnet-watch.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-11T17:17:41.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Project",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Project.csproj",
+              "RelativeDocumentMoniker": "Project\\Project.csproj",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Project.csproj",
+              "RelativeToolTip": "Project\\Project.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-11T17:17:59.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": ".gitkeep",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\wwwroot\\uploads\\articles\\.gitkeep",
+              "RelativeDocumentMoniker": "Project\\wwwroot\\uploads\\articles\\.gitkeep",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\wwwroot\\uploads\\articles\\.gitkeep",
+              "RelativeToolTip": "Project\\wwwroot\\uploads\\articles\\.gitkeep",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-11T17:13:13.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "CustomAuthenticationStateProvider.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Services\\CustomAuthenticationStateProvider.cs",
+              "RelativeDocumentMoniker": "FrontEnd\\Services\\CustomAuthenticationStateProvider.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Services\\CustomAuthenticationStateProvider.cs",
+              "RelativeToolTip": "FrontEnd\\Services\\CustomAuthenticationStateProvider.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAIBZwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T17:05:01.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ImageUploadService.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Services\\ImageUploadService.cs",
+              "RelativeDocumentMoniker": "FrontEnd\\Services\\ImageUploadService.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Services\\ImageUploadService.cs",
+              "RelativeToolTip": "FrontEnd\\Services\\ImageUploadService.cs",
+              "ViewState": "AgIAAJQAAAAAAAAAAIBYwJgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:54:34.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "EditArticle.razor",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\EditArticle.razor",
+              "RelativeDocumentMoniker": "FrontEnd\\Pages\\Admin\\EditArticle.razor",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\EditArticle.razor",
+              "RelativeToolTip": "FrontEnd\\Pages\\Admin\\EditArticle.razor",
+              "ViewState": "AgIAAFgCAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T16:56:58.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Article.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Models\\Article.cs",
+              "RelativeDocumentMoniker": "FrontEnd\\Models\\Article.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Models\\Article.cs",
+              "RelativeToolTip": "FrontEnd\\Models\\Article.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAEBUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:28:54.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "AddArticle.razor",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\AddArticle.razor",
+              "RelativeDocumentMoniker": "FrontEnd\\Pages\\Admin\\AddArticle.razor",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\AddArticle.razor",
+              "RelativeToolTip": "FrontEnd\\Pages\\Admin\\AddArticle.razor",
+              "ViewState": "AgIAAHsCAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T16:29:39.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "20251211163839_AddImageUrlToArticleSafe.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Migrations\\20251211163839_AddImageUrlToArticleSafe.cs",
+              "RelativeDocumentMoniker": "Project\\Migrations\\20251211163839_AddImageUrlToArticleSafe.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Migrations\\20251211163839_AddImageUrlToArticleSafe.cs",
+              "RelativeToolTip": "Project\\Migrations\\20251211163839_AddImageUrlToArticleSafe.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAEBVwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:39:04.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "AddArticleDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Models\\AddArticleDTO.cs",
+              "RelativeDocumentMoniker": "FrontEnd\\Models\\AddArticleDTO.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Models\\AddArticleDTO.cs",
+              "RelativeToolTip": "FrontEnd\\Models\\AddArticleDTO.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAEBUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:30:26.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Repositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "Project\\Repositories\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Repositories\\OrderRepository.cs",
+              "RelativeToolTip": "Project\\Repositories\\OrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T15:47:51.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Profile.razor",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Profile.razor",
+              "RelativeDocumentMoniker": "FrontEnd\\Pages\\Profile.razor",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Profile.razor",
+              "RelativeToolTip": "FrontEnd\\Pages\\Profile.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T16:21:16.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Store.razor",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Store.razor",
+              "RelativeDocumentMoniker": "FrontEnd\\Pages\\Store.razor",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Store.razor",
+              "RelativeToolTip": "FrontEnd\\Pages\\Store.razor",
+              "ViewState": "AgIAACcCAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T16:30:57.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "FrontEnd\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "FrontEnd\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAO0AAAAAAAAAAIBJwO8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T16:21:36.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "FrontEnd\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "FrontEnd\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAEAAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T16:21:54.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\App.razor",
+              "RelativeDocumentMoniker": "FrontEnd\\App.razor",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\App.razor",
+              "RelativeToolTip": "FrontEnd\\App.razor",
+              "ViewState": "AgIAAC0AAAAAAAAAAIBJwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T16:22:35.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "FrontEnd\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Home.razor",
+              "RelativeToolTip": "FrontEnd\\Pages\\Home.razor",
+              "ViewState": "AgIAAP4CAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T16:23:47.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "OrdersDone.razor",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\OrdersDone.razor",
+              "RelativeDocumentMoniker": "FrontEnd\\Pages\\Admin\\OrdersDone.razor",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\OrdersDone.razor",
+              "RelativeToolTip": "FrontEnd\\Pages\\Admin\\OrdersDone.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T16:11:54.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "OrdersDeclined.razor",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\OrdersDeclined.razor",
+              "RelativeDocumentMoniker": "FrontEnd\\Pages\\Admin\\OrdersDeclined.razor",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\OrdersDeclined.razor",
+              "RelativeToolTip": "FrontEnd\\Pages\\Admin\\OrdersDeclined.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T16:12:05.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Orders.razor",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\Orders.razor",
+              "RelativeDocumentMoniker": "FrontEnd\\Pages\\Admin\\Orders.razor",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\Orders.razor",
+              "RelativeToolTip": "FrontEnd\\Pages\\Admin\\Orders.razor",
+              "ViewState": "AgIAAMwAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-11T16:12:25.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\DataBase\\Client.cs",
+              "RelativeDocumentMoniker": "DataBase\\Client.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\DataBase\\Client.cs",
+              "RelativeToolTip": "DataBase\\Client.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T11:42:20.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ArticleController.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Controllers\\ArticleController.cs",
+              "RelativeDocumentMoniker": "Project\\Controllers\\ArticleController.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Controllers\\ArticleController.cs",
+              "RelativeToolTip": "Project\\Controllers\\ArticleController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T09:57:29.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAAEVAAAAAAAAAAAEwBgVAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-12-10T18:31:35.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AddUser.razor",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\AddUser.razor",
+              "RelativeDocumentMoniker": "FrontEnd\\Pages\\Admin\\AddUser.razor",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\AddUser.razor",
+              "RelativeToolTip": "FrontEnd\\Pages\\Admin\\AddUser.razor",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T14:25:01.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EditUser.razor",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\EditUser.razor",
+              "RelativeDocumentMoniker": "FrontEnd\\Pages\\Admin\\EditUser.razor",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\EditUser.razor",
+              "RelativeToolTip": "FrontEnd\\Pages\\Admin\\EditUser.razor",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T14:19:06.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\DTO\\UserDTO.cs",
+              "RelativeDocumentMoniker": "Project\\DTO\\UserDTO.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\DTO\\UserDTO.cs",
+              "RelativeToolTip": "Project\\DTO\\UserDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:08:56.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\DataBase\\Order.cs",
+              "RelativeDocumentMoniker": "DataBase\\Order.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\DataBase\\Order.cs",
+              "RelativeToolTip": "DataBase\\Order.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwBsAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T11:31:51.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddressBinder.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\AppData\\Local\\Temp\\.vsdbgsrc\\44aa595dc2a1078aa662bebf92f46ec0aa83d37961bfc5ec1f12f1b995219153\\AddressBinder.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\44aa595dc2a1078aa662bebf92f46ec0aa83d37961bfc5ec1f12f1b995219153\\AddressBinder.cs",
+              "ToolTip": "C:\\Users\\ramic\\AppData\\Local\\Temp\\.vsdbgsrc\\44aa595dc2a1078aa662bebf92f46ec0aa83d37961bfc5ec1f12f1b995219153\\AddressBinder.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\44aa595dc2a1078aa662bebf92f46ec0aa83d37961bfc5ec1f12f1b995219153\\AddressBinder.cs",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAmwLAAAAAzAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T10:22:48.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "FrontEnd\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Services\\AuthService.cs",
+              "RelativeToolTip": "FrontEnd\\Services\\AuthService.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAMBbwJ0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T10:07:03.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "FrontEnd\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Services\\UserService.cs",
+              "RelativeToolTip": "FrontEnd\\Services\\UserService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAYwCkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T13:58:46.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Project\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Project\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T17:22:45.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SignupDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\DTO\\SignupDTO.cs",
+              "RelativeDocumentMoniker": "Project\\DTO\\SignupDTO.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\DTO\\SignupDTO.cs",
+              "RelativeToolTip": "Project\\DTO\\SignupDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T17:22:30.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LoginResultDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\DTO\\LoginResultDTO.cs",
+              "RelativeDocumentMoniker": "Project\\DTO\\LoginResultDTO.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\DTO\\LoginResultDTO.cs",
+              "RelativeToolTip": "Project\\DTO\\LoginResultDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:01:56.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\DTO\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "Project\\DTO\\LoginDTO.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\DTO\\LoginDTO.cs",
+              "RelativeToolTip": "Project\\DTO\\LoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:01:45.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Users.razor",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\Users.razor",
+              "RelativeDocumentMoniker": "FrontEnd\\Pages\\Admin\\Users.razor",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Pages\\Admin\\Users.razor",
+              "RelativeToolTip": "FrontEnd\\Pages\\Admin\\Users.razor",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAABQAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:58:48.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SignupDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Models\\SignupDTO.cs",
+              "RelativeDocumentMoniker": "FrontEnd\\Models\\SignupDTO.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Models\\SignupDTO.cs",
+              "RelativeToolTip": "FrontEnd\\Models\\SignupDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:27:03.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Project\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Project\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:03:08.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Program.cs",
+              "RelativeDocumentMoniker": "FrontEnd\\Program.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Program.cs",
+              "RelativeToolTip": "FrontEnd\\Program.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAEBVwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T12:16:30.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Models\\User.cs",
+              "RelativeDocumentMoniker": "FrontEnd\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\FrontEnd\\Models\\User.cs",
+              "RelativeToolTip": "FrontEnd\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:34:48.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Project\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\ramic\\OneDrive\\Documents\\XuanZhi9\\projectCs2-main\\Project\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Project\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T13:54:46.241Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

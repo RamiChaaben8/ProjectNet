@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+
+namespace FrontEnd.Models
+{
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public float TotalPrice { get; set; }
+        public DateTime OrderDate { get; set; } = DateTime.Now;
+        public string Status { get; set; } = "Pending";
+        public List<Article> Receipt { get; set; } = new List<Article>();
+        public int ClientID { get; set; }
+        public string ClientEmail { get; set; }
+        public string ClientName { get; set; }
+    }
+}

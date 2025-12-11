@@ -1,0 +1,239 @@
+﻿@using FrontEnd.Services
+@inject IAuthService AuthService
+@inject NavigationManager NavigationManager
+@implements IDisposable
+
+<div class="top-row ps-3 navbar navbar-dark restaurant-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand restaurant-brand" href="">
+            <i class="bi bi-egg-fried"></i> Restaurant
+        </a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass nav-scrollable restaurant-menu" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        @if (AuthService.IsAuthenticated())
+        {
+            var role = AuthService.GetRole();
+            
+            @if (role == "Admin" || role == "admin")
+            {
+                <!-- Admin Navigation -->
+                <div class="nav-section-title">
+                    <i class="bi bi-shield-check"></i> Admin Dashboard
+                </div>
+                
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                        <span class="bi bi-house-door-fill" aria-hidden="true"></span> Home
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="admin/users">
+                        <span class="bi bi-people-fill" aria-hidden="true"></span> Users
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="admin/categories">
+                        <span class="bi bi-bookmark-fill" aria-hidden="true"></span> Categories
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="admin/articles">
+                        <span class="bi bi-card-list" aria-hidden="true"></span> Menu Items
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="admin/orders">
+                        <span class="bi bi-receipt" aria-hidden="true"></span> Orders
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <hr class="text-white-50" />
+                </div>
+                <div class="nav-item px-3">
+                    <a class="nav-link logout-link" @onclick="Logout" style="cursor: pointer;">
+                        <span class="bi bi-box-arrow-right" aria-hidden="true"></span> Logout
+                    </a>
+                </div>
+            }
+            else
+            {
+                <!-- Client Navigation -->
+                <div class="nav-section-title">
+                    <i class="bi bi-person-circle"></i> Customer Menu
+                </div>
+                
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                        <span class="bi bi-house-door-fill" aria-hidden="true"></span> Home
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="store">
+                        <span class="bi bi-egg-fried" aria-hidden="true"></span> Our Menu
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="store/cart">
+                        <span class="bi bi-cart3" aria-hidden="true"></span> My Cart
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="profile">
+                        <span class="bi bi-receipt" aria-hidden="true"></span> My Orders
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <hr class="text-white-50" />
+                </div>
+                <div class="nav-item px-3">
+                    <a class="nav-link logout-link" @onclick="Logout" style="cursor: pointer;">
+                        <span class="bi bi-box-arrow-right" aria-hidden="true"></span> Logout
+                    </a>
+                </div>
+            }
+        }
+        else
+        {
+            <!-- Not Authenticated Navigation -->
+            <div class="nav-section-title">
+                <i class="bi bi-egg-fried"></i> Welcome
+            </div>
+            
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                    <span class="bi bi-house-door-fill" aria-hidden="true"></span> Home
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="store">
+                    <span class="bi bi-egg-fried" aria-hidden="true"></span> Our Menu
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <hr class="text-white-50" />
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="login">
+                    <span class="bi bi-box-arrow-in-right" aria-hidden="true"></span> Login
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="signup">
+                    <span class="bi bi-person-plus-fill" aria-hidden="true"></span> Sign Up
+                </NavLink>
+            </div>
+        }
+    </nav>
+</div>
+
+<style>
+    .restaurant-navbar {
+        background: linear-gradient(135deg, #e67e22 0%, #d35400 100%) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .restaurant-brand {
+        font-size: 24px !important;
+        font-weight: 700 !important;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .restaurant-brand i {
+        font-size: 28px;
+    }
+
+    .restaurant-menu {
+        background: linear-gradient(to bottom, #2c3e50 0%, #34495e 100%);
+    }
+
+    .nav-section-title {
+        padding: 20px 20px 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #95a5a6;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .nav-item .nav-link {
+        color: #ecf0f1;
+        padding: 12px 20px;
+        border-radius: 8px;
+        margin: 5px 10px;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .nav-item .nav-link:hover {
+        background: rgba(230, 126, 34, 0.2);
+        color: #fff;
+        transform: translateX(5px);
+    }
+
+    .nav-item .nav-link.active {
+        background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+        color: white;
+        font-weight: 600;
+    }
+
+    .nav-item .nav-link span {
+        font-size: 20px;
+    }
+
+    .logout-link:hover {
+        background: rgba(231, 76, 60, 0.2) !important;
+        color: #e74c3c !important;
+    }
+
+    .nav-item hr {
+        margin: 15px 20px;
+        opacity: 0.2;
+    }
+</style>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    protected override void OnInitialized()
+    {
+        NavigationManager.LocationChanged += OnLocationChanged;
+    }
+
+    private void OnLocationChanged(object sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)
+    {
+        StateHasChanged();
+    }
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+
+    private async Task Logout()
+    {
+        await AuthService.LogoutAsync();
+        NavigationManager.NavigateTo("/", true);
+    }
+
+    public void Dispose()
+    {
+        NavigationManager.LocationChanged -= OnLocationChanged;
+    }
+}

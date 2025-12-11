@@ -1,0 +1,74 @@
+@page "/admin/orders/declined"
+@using FrontEnd.Models
+@using FrontEnd.Services
+@inject OrderService OrderService
+@inject NavigationManager NavigationManager
+@attribute [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Admin")]
+
+<h3>Declined Orders</h3>
+
+@if (errorMessage != null)
+{
+    <div class="alert alert-danger">@errorMessage</div>
+}
+
+@if (orders == null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (!orders.Any())
+{
+    <p><em>No declined orders.</em></p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Date</th>
+                <th>Client Email</th>
+                <th>Client Name</th>
+                <th>Total</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in orders)
+            {
+                <tr>
+                    <td>@order.OrderID</td>
+                    <td>@order.OrderDate.ToShortDateString()</td>
+                    <td>@order.ClientEmail</td>
+                    <td>@order.ClientName</td>
+                    <td>$@order.TotalPrice.ToString("F2")</td>
+                    <td><span class="badge bg-danger">@order.Status</span></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Order> orders;
+    private string errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadOrders();
+    }
+
+    private async Task LoadOrders()
+    {
+        try 
+        {
+            var allOrders = await OrderService.GetAllOrders();
+            orders = allOrders?.Where(o => o.Status == "Declined").ToList() ?? new List<Order>();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error fetching orders: {ex.Message}";
+            Console.WriteLine(errorMessage);
+        }
+    }
+}

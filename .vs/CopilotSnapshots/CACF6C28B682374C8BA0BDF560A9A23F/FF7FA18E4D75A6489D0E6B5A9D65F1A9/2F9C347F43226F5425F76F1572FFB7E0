@@ -1,0 +1,51 @@
+﻿using Microsoft.AspNetCore.Components.Authorization;
+using System.Security.Claims;
+
+namespace FrontEnd.Services
+{
+    public class CustomAuthenticationStateProvider : AuthenticationStateProvider
+    {
+        private readonly IAuthService _authService;
+
+        public CustomAuthenticationStateProvider(IAuthService authService)
+        {
+            _authService = authService;
+        }
+
+        public override async Task<AuthenticationState> GetAuthenticationStateAsync()
+        {
+            // Try to restore from LocalStorage if memory is empty
+            if (!_authService.IsAuthenticated() && _authService is AuthService authService)
+            {
+                await authService.TryRestoreAuthAsync();
+            }
+
+            var token = _authService.GetToken();
+            var role = _authService.GetRole();
+
+            ClaimsIdentity identity;
+
+            if (!string.IsNullOrEmpty(token) && !string.IsNullOrEmpty(role))
+            {
+                var claims = new[]
+                {
+                    new Claim(ClaimTypes.Name, "User"),
+                    new Claim(ClaimTypes.Role, role)
+                };
+                identity = new ClaimsIdentity(claims, "jwt");
+            }
+            else
+            {
+                identity = new ClaimsIdentity();
+            }
+
+            var user = new ClaimsPrincipal(identity);
+            return new AuthenticationState(user);
+        }
+
+        public void NotifyAuthenticationStateChanged()
+        {
+            NotifyAuthenticationStateChanged(GetAuthenticationStateAsync());
+        }
+    }
+}

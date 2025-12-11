@@ -1,0 +1,378 @@
+﻿@page "/"
+@using FrontEnd.Services
+@inject NavigationManager Navigation
+@inject IAuthService AuthService
+
+<PageTitle>Home - Restaurant</PageTitle>
+
+<div class="restaurant-home">
+    @if (AuthService.IsAuthenticated())
+    {
+        var role = AuthService.GetRole();
+        
+        @if (role == "Admin" || role == "admin")
+        {
+            <div class="admin-welcome">
+                <div class="welcome-card">
+                    <i class="bi bi-shield-check welcome-icon"></i>
+                    <h1>Welcome Back, Chef! 👨‍🍳</h1>
+                    <p>Manage your restaurant operations from the dashboard</p>
+                    <div class="action-grid">
+                        <button class="admin-btn orders-btn" @onclick='() => Navigation.NavigateTo("/admin/orders")'>
+                            <i class="bi bi-receipt"></i>
+                            <span>Manage Orders</span>
+                        </button>
+                        <button class="admin-btn menu-btn" @onclick='() => Navigation.NavigateTo("/admin/articles")'>
+                            <i class="bi bi-card-list"></i>
+                            <span>Edit Menu</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="customer-welcome">
+                <div class="hero-section">
+                    <h1>Welcome Back! 🍽️</h1>
+                    <p class="hero-subtitle">Ready to enjoy some delicious food?</p>
+                    <div class="cta-buttons">
+                        <button class="btn-primary-restaurant" @onclick='() => Navigation.NavigateTo("/store")'>
+                            <i class="bi bi-egg-fried"></i> Browse Menu
+                        </button>
+                        <button class="btn-secondary-restaurant" @onclick='() => Navigation.NavigateTo("/profile")'>
+                            <i class="bi bi-person-circle"></i> My Orders
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="guest-home">
+            <div class="hero-banner">
+                <div class="hero-overlay">
+                    <h1 class="hero-title">Welcome to Our Restaurant 🍴</h1>
+                    <p class="hero-description">Serving the finest dishes with passion and quality</p>
+                    <div class="hero-actions">
+                        <button class="btn-explore" @onclick='() => Navigation.NavigateTo("/store")'>
+                            <i class="bi bi-egg-fried"></i> Explore Menu
+                        </button>
+                        <button class="btn-login" @onclick='() => Navigation.NavigateTo("/login")'>
+                            <i class="bi bi-box-arrow-in-right"></i> Sign In
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-showcase">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="bi bi-egg-fried"></i>
+                    </div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>We use only the freshest, locally-sourced ingredients in every dish</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+                    <h3>Quick Service</h3>
+                    <p>Fast preparation and delivery to ensure your meal arrives hot and fresh</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="bi bi-award"></i>
+                    </div>
+                    <h3>Award Winning</h3>
+                    <p>Recognized for excellence in culinary arts and customer service</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .restaurant-home {
+        min-height: 100vh;
+    }
+
+    /* Admin Welcome Styles */
+    .admin-welcome {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .welcome-card {
+        background: white;
+        border-radius: 20px;
+        padding: 60px 40px;
+        text-align: center;
+        max-width: 600px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .welcome-icon {
+        font-size: 80px;
+        color: #e67e22;
+        margin-bottom: 20px;
+    }
+
+    .welcome-card h1 {
+        font-size: 36px;
+        color: #2c3e50;
+        margin-bottom: 15px;
+    }
+
+    .welcome-card p {
+        color: #7f8c8d;
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .action-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .admin-btn {
+        padding: 30px 20px;
+        border: none;
+        border-radius: 15px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        color: white;
+    }
+
+    .admin-btn i {
+        font-size: 48px;
+    }
+
+    .orders-btn {
+        background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+    }
+
+    .menu-btn {
+        background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    }
+
+    .admin-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Customer Welcome Styles */
+    .customer-welcome {
+        min-height: 100vh;
+        background: linear-gradient(to bottom, #fff5e6 0%, #ffffff 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .hero-section {
+        text-align: center;
+        max-width: 700px;
+    }
+
+    .hero-section h1 {
+        font-size: 48px;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .hero-subtitle {
+        font-size: 22px;
+        color: #7f8c8d;
+        margin-bottom: 40px;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Guest Home Styles */
+    .guest-home {
+        min-height: 100vh;
+    }
+
+    .hero-banner {
+        height: 70vh;
+        background: linear-gradient(135deg, rgba(230, 126, 34, 0.95) 0%, rgba(211, 84, 0, 0.95) 100%),
+                    url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200') center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .hero-overlay {
+        text-align: center;
+        color: white;
+        padding: 40px 20px;
+        z-index: 1;
+    }
+
+    .hero-title {
+        font-size: 56px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-description {
+        font-size: 24px;
+        margin-bottom: 40px;
+        opacity: 0.95;
+    }
+
+    .hero-actions {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn-primary-restaurant,
+    .btn-secondary-restaurant,
+    .btn-explore,
+    .btn-login {
+        padding: 16px 36px;
+        border: none;
+        border-radius: 30px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn-primary-restaurant,
+    .btn-explore {
+        background: white;
+        color: #e67e22;
+    }
+
+    .btn-primary-restaurant:hover,
+    .btn-explore:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-secondary-restaurant,
+    .btn-login {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 2px solid white;
+    }
+
+    .btn-secondary-restaurant:hover,
+    .btn-login:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Features Showcase */
+    .features-showcase {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 80px 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+    }
+
+    .feature-item {
+        text-align: center;
+        padding: 40px 30px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-10px);
+    }
+
+    .feature-icon {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 25px;
+        background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 48px;
+    }
+
+    .feature-item h3 {
+        font-size: 24px;
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    .feature-item p {
+        color: #7f8c8d;
+        line-height: 1.6;
+        font-size: 16px;
+    }
+
+    @@media (max-width: 768px) {
+        .hero-title {
+            font-size: 36px;
+        }
+
+        .hero-description {
+            font-size: 18px;
+        }
+
+        .action-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .hero-section h1 {
+            font-size: 32px;
+        }
+
+        .hero-actions,
+        .cta-buttons {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .btn-primary-restaurant,
+        .btn-secondary-restaurant,
+        .btn-explore,
+        .btn-login {
+            width: 100%;
+        }
+    }
+</style>
+
+@code {
+    // Component code is empty as logic is in the markup
+}

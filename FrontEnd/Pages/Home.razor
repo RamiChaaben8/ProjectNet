@@ -1,0 +1,768 @@
+﻿@page "/"
+@using FrontEnd.Services
+@using FrontEnd.Models
+@inject NavigationManager Navigation
+@inject IAuthService AuthService
+@inject CategoryService CategoryService
+@inject ArticleService ArticleService
+
+<PageTitle>Home - Restaurant</PageTitle>
+
+<div class="restaurant-home">
+    @if (AuthService.IsAuthenticated())
+    {
+        var role = AuthService.GetRole();
+        
+        @if (role == "Admin" || role == "admin")
+        {
+            <div class="admin-welcome">
+                <div class="welcome-card">
+                    <i class="bi bi-shield-check welcome-icon"></i>
+                    <h1>Welcome Back, Chef! 👨‍🍳</h1>
+                    <p>Manage your restaurant operations from the dashboard</p>
+                    <div class="action-grid">
+                        <button class="admin-btn orders-btn" @onclick='() => Navigation.NavigateTo("/admin/orders")'>
+                            <i class="bi bi-receipt"></i>
+                            <span>Manage Orders</span>
+                        </button>
+                        <button class="admin-btn menu-btn" @onclick='() => Navigation.NavigateTo("/admin/articles")'>
+                            <i class="bi bi-card-list"></i>
+                            <span>Edit Menu</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="customer-welcome">
+                <div class="hero-section">
+                    <h1>Welcome Back! 🍽️</h1>
+                    <p class="hero-subtitle">Ready to enjoy some delicious food?</p>
+                    <div class="cta-buttons">
+                        <button class="btn-primary-restaurant" @onclick='() => Navigation.NavigateTo("/store")'>
+                            <i class="bi bi-egg-fried"></i> Browse Menu
+                        </button>
+                        <button class="btn-secondary-restaurant" @onclick='() => Navigation.NavigateTo("/profile")'>
+                            <i class="bi bi-person-circle"></i> My Orders
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="guest-home">
+            <div class="hero-banner">
+                <div class="hero-overlay">
+                    <h1 class="hero-title">Welcome to Our Restaurant 🍴</h1>
+                    <p class="hero-description">Serving the finest dishes with passion and quality</p>
+                    <div class="hero-actions">
+                        <button class="btn-explore" @onclick='() => Navigation.NavigateTo("/store")'>
+                            <i class="bi bi-egg-fried"></i> Explore Menu
+                        </button>
+                        <button class="btn-login" @onclick='() => Navigation.NavigateTo("/login")'>
+                            <i class="bi bi-box-arrow-in-right"></i> Sign In
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-showcase">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="bi bi-egg-fried"></i>
+                    </div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>We use only the freshest, locally-sourced ingredients in every dish</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+                    <h3>Quick Service</h3>
+                    <p>Fast preparation and delivery to ensure your meal arrives hot and fresh</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="bi bi-award"></i>
+                    </div>
+                    <h3>Award Winning</h3>
+                    <p>Recognized for excellence in culinary arts and customer service</p>
+                </div>
+            </div>
+
+            <!-- Category Filter and Featured Menu Section -->
+            <div class="featured-menu-section">
+                <div class="section-header">
+                    <h2>Our Featured Menu 🍽️</h2>
+                    <p>Discover our delicious selection of dishes</p>
+                </div>
+
+                @if (isLoadingCategories || isLoadingArticles)
+                {
+                    <div class="loading-state">
+                        <div class="spinner-border text-warning" role="status"></div>
+                        <p>Loading menu...</p>
+                    </div>
+                }
+                else if (categories != null && categories.Any())
+                {
+                    <!-- Category Filter -->
+                    <div class="category-filter">
+                        <button class="category-btn @(selectedCategoryId == 0 ? "active" : "")" 
+                                @onclick="() => FilterByCategory(0)">
+                            <i class="bi bi-grid-fill"></i>
+                            <span>All</span>
+                        </button>
+                        @foreach (var category in categories)
+                        {
+                            <button class="category-btn @(selectedCategoryId == category.CategoryID ? "active" : "")" 
+                                    @onclick="() => FilterByCategory(category.CategoryID)">
+                                <i class="bi bi-tag-fill"></i>
+                                <span>@category.Name</span>
+                            </button>
+                        }
+                    </div>
+
+                    <!-- Featured Articles Grid -->
+                    @if (filteredArticles != null && filteredArticles.Any())
+                    {
+                        <div class="featured-grid">
+                            @foreach (var article in filteredArticles.Take(6))
+                            {
+                                <div class="featured-card">
+                                    <div class="featured-image">
+                                        @if (!string.IsNullOrEmpty(article.ImageUrl))
+                                        {
+                                            <img src="@article.ImageUrl" alt="@article.Name" />
+                                        }
+                                        else
+                                        {
+                                            <div class="placeholder-image">
+                                                <i class="bi bi-egg-fried"></i>
+                                            </div>
+                                        }
+                                        @if (article.Category != null)
+                                        {
+                                            <span class="category-badge">@article.Category.Name</span>
+                                        }
+                                    </div>
+                                    <div class="featured-content">
+                                        <h4>@article.Name</h4>
+                                        <p>@article.Description</p>
+                                        <div class="featured-footer">
+                                            <span class="price">$@article.Price.ToString("F2")</span>
+                                            <button class="order-btn" @onclick='() => Navigation.NavigateTo("/store")'>
+                                                Order Now
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="view-all-section">
+                            <button class="btn-view-all" @onclick='() => Navigation.NavigateTo("/store")'>
+                                <i class="bi bi-arrow-right-circle"></i> View Full Menu
+                            </button>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="empty-category">
+                            <i class="bi bi-emoji-frown"></i>
+                            <p>No dishes available in this category</p>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .restaurant-home {
+        min-height: 100vh;
+    }
+
+    /* Admin Welcome Styles */
+    .admin-welcome {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .welcome-card {
+        background: white;
+        border-radius: 20px;
+        padding: 60px 40px;
+        text-align: center;
+        max-width: 600px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .welcome-icon {
+        font-size: 80px;
+        color: #e67e22;
+        margin-bottom: 20px;
+    }
+
+    .welcome-card h1 {
+        font-size: 36px;
+        color: #2c3e50;
+        margin-bottom: 15px;
+    }
+
+    .welcome-card p {
+        color: #7f8c8d;
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .action-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .admin-btn {
+        padding: 30px 20px;
+        border: none;
+        border-radius: 15px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        color: white;
+    }
+
+    .admin-btn i {
+        font-size: 48px;
+    }
+
+    .orders-btn {
+        background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+    }
+
+    .menu-btn {
+        background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    }
+
+    .admin-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Customer Welcome Styles */
+    .customer-welcome {
+        min-height: 100vh;
+        background: linear-gradient(to bottom, #fff5e6 0%, #ffffff 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .hero-section {
+        text-align: center;
+        max-width: 700px;
+    }
+
+    .hero-section h1 {
+        font-size: 48px;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .hero-subtitle {
+        font-size: 22px;
+        color: #7f8c8d;
+        margin-bottom: 40px;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Guest Home Styles */
+    .guest-home {
+        min-height: 100vh;
+    }
+
+    .hero-banner {
+        height: 70vh;
+        background: linear-gradient(135deg, rgba(230, 126, 34, 0.95) 0%, rgba(211, 84, 0, 0.95) 100%),
+                    url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200') center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .hero-overlay {
+        text-align: center;
+        color: white;
+        padding: 40px 20px;
+        z-index: 1;
+    }
+
+    .hero-title {
+        font-size: 56px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-description {
+        font-size: 24px;
+        margin-bottom: 40px;
+        opacity: 0.95;
+    }
+
+    .hero-actions {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn-primary-restaurant,
+    .btn-secondary-restaurant,
+    .btn-explore,
+    .btn-login {
+        padding: 16px 36px;
+        border: none;
+        border-radius: 30px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn-primary-restaurant,
+    .btn-explore {
+        background: white;
+        color: #e67e22;
+    }
+
+    .btn-primary-restaurant:hover,
+    .btn-explore:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-secondary-restaurant,
+    .btn-login {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 2px solid white;
+    }
+
+    .btn-secondary-restaurant:hover,
+    .btn-login:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Features Showcase */
+    .features-showcase {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 80px 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+    }
+
+    .feature-item {
+        text-align: center;
+        padding: 40px 30px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-10px);
+    }
+
+    .feature-icon {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 25px;
+        background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 48px;
+    }
+
+    .feature-item h3 {
+        font-size: 24px;
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    .feature-item p {
+        color: #7f8c8d;
+        line-height: 1.6;
+        font-size: 16px;
+    }
+
+    /* Featured Menu Section */
+    .featured-menu-section {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 80px 20px;
+        background: #ffffff;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .section-header h2 {
+        font-size: 42px;
+        color: #2c3e50;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .section-header p {
+        font-size: 18px;
+        color: #7f8c8d;
+    }
+
+    /* Category Filter */
+    .category-filter {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 50px;
+        padding: 0 20px;
+    }
+
+    .category-btn {
+        padding: 12px 28px;
+        border: 2px solid #e67e22;
+        background: white;
+        color: #e67e22;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .category-btn:hover {
+        background: #fff5e6;
+        transform: translateY(-2px);
+    }
+
+    .category-btn.active {
+        background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+        color: white;
+        border-color: #d35400;
+        box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+    }
+
+    /* Featured Grid */
+    .featured-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .featured-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s;
+    }
+
+    .featured-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 25px rgba(230, 126, 34, 0.2);
+    }
+
+    .featured-image {
+        height: 250px;
+        position: relative;
+        overflow: hidden;
+        background: #f8f9fa;
+    }
+
+    .featured-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s;
+    }
+
+    .featured-card:hover .featured-image img {
+        transform: scale(1.1);
+    }
+
+    .placeholder-image {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+        color: #e67e22;
+        font-size: 80px;
+    }
+
+    .category-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: rgba(230, 126, 34, 0.95);
+        color: white;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        backdrop-filter: blur(10px);
+    }
+
+    .featured-content {
+        padding: 25px;
+    }
+
+    .featured-content h4 {
+        font-size: 22px;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 12px;
+    }
+
+    .featured-content p {
+        color: #7f8c8d;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .featured-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+        border-top: 2px solid #ecf0f1;
+    }
+
+    .price {
+        font-size: 28px;
+        font-weight: 700;
+        color: #e67e22;
+    }
+
+    .order-btn {
+        background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+        color: white;
+        border: none;
+        padding: 10px 24px;
+        border-radius: 25px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .order-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+    }
+
+    /* View All Section */
+    .view-all-section {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .btn-view-all {
+        padding: 16px 40px;
+        background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+        color: white;
+        border: none;
+        border-radius: 30px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn-view-all:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(230, 126, 34, 0.4);
+    }
+
+    /* Loading and Empty States */
+    .loading-state, .empty-category {
+        text-align: center;
+        padding: 80px 20px;
+        color: #7f8c8d;
+    }
+
+    .loading-state .spinner-border {
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .empty-category i {
+        font-size: 64px;
+        color: #95a5a6;
+        margin-bottom: 20px;
+    }
+
+    .empty-category p {
+        font-size: 18px;
+    }
+
+    @@media (max-width: 768px) {
+        .hero-title {
+            font-size: 36px;
+        }
+
+        .hero-description {
+            font-size: 18px;
+        }
+
+        .action-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .hero-section h1 {
+            font-size: 32px;
+        }
+
+        .hero-actions,
+        .cta-buttons {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .btn-primary-restaurant,
+        .btn-secondary-restaurant,
+        .btn-explore,
+        .btn-login {
+            width: 100%;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+        }
+
+        .featured-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .category-filter {
+            gap: 10px;
+        }
+
+        .category-btn {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+    }
+</style>
+
+@code {
+    private List<Category>? categories;
+    private List<Article>? allArticles;
+    private List<Article>? filteredArticles;
+    private int selectedCategoryId = 0;
+    private bool isLoadingCategories = true;
+    private bool isLoadingArticles = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Only load categories and articles for guest users
+        if (!AuthService.IsAuthenticated())
+        {
+            try
+            {
+                // Load categories and articles in parallel
+                var categoriesTask = CategoryService.GetCategories();
+                var articlesTask = ArticleService.GetArticles();
+
+                await Task.WhenAll(categoriesTask, articlesTask);
+
+                categories = await categoriesTask;
+                allArticles = await articlesTask;
+                
+                // Initially show all articles
+                filteredArticles = allArticles;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading data: {ex.Message}");
+                categories = new List<Category>();
+                allArticles = new List<Article>();
+                filteredArticles = new List<Article>();
+            }
+            finally
+            {
+                isLoadingCategories = false;
+                isLoadingArticles = false;
+            }
+        }
+    }
+
+    private void FilterByCategory(int categoryId)
+    {
+        selectedCategoryId = categoryId;
+        
+        if (categoryId == 0)
+        {
+            // Show all articles
+            filteredArticles = allArticles;
+        }
+        else
+        {
+            // Filter by selected category
+            filteredArticles = allArticles?.Where(a => a.CategoryID == categoryId).ToList();
+        }
+        
+        StateHasChanged();
+    }
+}

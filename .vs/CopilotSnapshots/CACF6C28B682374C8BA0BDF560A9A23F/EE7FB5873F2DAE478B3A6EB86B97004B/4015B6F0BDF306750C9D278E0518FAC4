@@ -1,0 +1,225 @@
+﻿@page "/"
+@using FrontEnd.Services
+@inject NavigationManager Navigation
+@inject IAuthService AuthService
+
+<PageTitle>Home - E-Commerce Store</PageTitle>
+
+<div class="home-container">
+    @if (AuthService.IsAuthenticated())
+    {
+        var role = AuthService.GetRole();
+        
+        @if (role == "Admin" || role == "admin")
+        {
+            <div class="welcome-section">
+                <h1>Welcome, Admin! 👋</h1>
+                <p>Manage your e-commerce platform from the dashboard.</p>
+                <div class="action-buttons">
+                    <button class="btn btn-primary" @onclick='() => Navigation.NavigateTo("/admin/orders")'>
+                        <span class="bi bi-cart-fill"></span> View Orders
+                    </button>
+                    <button class="btn btn-secondary" @onclick='() => Navigation.NavigateTo("/admin/articles")'>
+                        <span class="bi bi-box-seam"></span> Manage Articles
+                    </button>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="welcome-section">
+                <h1>Welcome Back! 🛍️</h1>
+                <p>Discover amazing products in our store.</p>
+                <div class="action-buttons">
+                    <button class="btn btn-primary" @onclick='() => Navigation.NavigateTo("/store")'>
+                        <span class="bi bi-shop"></span> Browse Store
+                    </button>
+                    <button class="btn btn-secondary" @onclick='() => Navigation.NavigateTo("/profile")'>
+                        <span class="bi bi-person-circle"></span> My Profile
+                    </button>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="hero-section">
+            <h1>Welcome to Our Store! 🎉</h1>
+            <p class="lead">Your one-stop shop for amazing products</p>
+            <div class="action-buttons">
+                <button class="btn btn-primary" @onclick='() => Navigation.NavigateTo("/store")'>
+                    <span class="bi bi-shop"></span> Browse Store
+                </button>
+                <button class="btn btn-outline" @onclick='() => Navigation.NavigateTo("/login")'>
+                    <span class="bi bi-box-arrow-in-right"></span> Login
+                </button>
+                <button class="btn btn-outline" @onclick='() => Navigation.NavigateTo("/signup")'>
+                    <span class="bi bi-person-plus-fill"></span> Sign Up
+                </button>
+            </div>
+        </div>
+    }
+
+    <div class="features-section">
+        <div class="feature-card">
+            <span class="bi bi-truck" style="font-size: 48px; color: #667eea;"></span>
+            <h3>Fast Delivery</h3>
+            <p>Quick and reliable shipping to your doorstep</p>
+        </div>
+        <div class="feature-card">
+            <span class="bi bi-shield-check" style="font-size: 48px; color: #667eea;"></span>
+            <h3>Secure Shopping</h3>
+            <p>Your transactions are safe and secure</p>
+        </div>
+        <div class="feature-card">
+            <span class="bi bi-star-fill" style="font-size: 48px; color: #667eea;"></span>
+            <h3>Quality Products</h3>
+            <p>Carefully curated items just for you</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .home-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .hero-section, .welcome-section {
+        text-align: center;
+        padding: 60px 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 20px;
+        margin-bottom: 60px;
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    }
+
+    .hero-section h1, .welcome-section h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .lead {
+        font-size: 24px;
+        margin-bottom: 40px;
+        opacity: 0.95;
+    }
+
+    .welcome-section p {
+        font-size: 20px;
+        margin-bottom: 30px;
+        opacity: 0.95;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 15px 30px;
+        font-size: 18px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn-primary {
+        background: white;
+        color: #667eea;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-secondary {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+    }
+
+    .btn-outline:hover {
+        background: white;
+        color: #667eea;
+    }
+
+    .features-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .feature-card {
+        text-align: center;
+        padding: 40px 20px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .feature-card h3 {
+        margin: 20px 0 10px;
+        color: #333;
+    }
+
+    .feature-card p {
+        color: #666;
+        line-height: 1.6;
+    }
+
+    @@media (max-width: 768px) {
+        .hero-section h1, .welcome-section h1 {
+            font-size: 32px;
+        }
+
+        .lead {
+            font-size: 18px;
+        }
+
+        .action-buttons {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .btn {
+            width: 100%;
+        }
+
+        .features-section {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+@code {
+    // Component code is empty as logic is in the markup
+}

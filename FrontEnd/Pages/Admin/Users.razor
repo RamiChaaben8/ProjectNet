@@ -1,0 +1,175 @@
+@page "/admin/users"
+@inject FrontEnd.Services.IUserService UserService
+@inject NavigationManager NavigationManager
+@using FrontEnd.Models
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h3>Users List</h3>
+    <button class="btn btn-success" @onclick="NavigateToAddUser">
+        <i class="bi bi-plus-circle"></i> Add User
+    </button>
+</div>
+
+@if (users == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @errorMessage
+            <button type="button" class="btn-close" @onclick="() => errorMessage = string.Empty"></button>
+        </div>
+    }
+
+    @if (!string.IsNullOrEmpty(successMessage))
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @successMessage
+            <button type="button" class="btn-close" @onclick="() => successMessage = string.Empty"></button>
+        </div>
+    }
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>User Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <td>@user.UserName</td>
+                    <td>@user.Email</td>
+                    <td>@(user.PhoneNumber ?? "N/A")</td>
+                    <td>@user.Role</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary me-1" @onclick="() => NavigateToEditUser(user.Id)">
+                            <i class="bi bi-pencil"></i> Edit
+                        </button>
+                        <button class="btn btn-sm btn-danger" @onclick="() => ShowDeleteConfirmation(user.Id, user.UserName)">
+                            <i class="bi bi-trash"></i> Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@if (showDeleteDialog)
+{
+    <div class="modal fade show d-block" tabindex="-1" style="background-color: rgba(0,0,0,0.5);">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirm Delete</h5>
+                    <button type="button" class="btn-close" @onclick="CancelDelete"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete user <strong>@userToDeleteName</strong>?</p>
+                    <p class="text-danger">This action cannot be undone.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" @onclick="CancelDelete">Cancel</button>
+                    <button type="button" class="btn btn-danger" @onclick="ConfirmDelete" disabled="@isDeleting">
+                        @if (isDeleting)
+                        {
+                            <span class="spinner-border spinner-border-sm me-2"></span>
+                        }
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private List<User> users;
+    private string errorMessage = string.Empty;
+    private string successMessage = string.Empty;
+    private bool showDeleteDialog = false;
+    private string userToDeleteId = string.Empty;
+    private string userToDeleteName = string.Empty;
+    private bool isDeleting = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try 
+        {
+            users = await UserService.GetUsers();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching users: {ex.Message}");
+            errorMessage = "Failed to load users. Please try again.";
+        }
+    }
+
+    private void NavigateToAddUser()
+    {
+        NavigationManager.NavigateTo("/admin/users/add");
+    }
+
+    private void NavigateToEditUser(string userId)
+    {
+        NavigationManager.NavigateTo($"/admin/users/edit/{userId}");
+    }
+
+    private void ShowDeleteConfirmation(string userId, string userName)
+    {
+        userToDeleteId = userId;
+        userToDeleteName = userName;
+        showDeleteDialog = true;
+    }
+
+    private void CancelDelete()
+    {
+        showDeleteDialog = false;
+        userToDeleteId = string.Empty;
+        userToDeleteName = string.Empty;
+    }
+
+    private async Task ConfirmDelete()
+    {
+        isDeleting = true;
+        errorMessage = string.Empty;
+        successMessage = string.Empty;
+
+        try
+        {
+            var success = await UserService.DeleteUser(userToDeleteId);
+            
+            if (success)
+            {
+                successMessage = $"User '{userToDeleteName}' deleted successfully!";
+                showDeleteDialog = false;
+                
+                // Refresh the users list
+                users = await UserService.GetUsers();
+            }
+            else
+            {
+                errorMessage = "Failed to delete user. Please try again.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error: {ex.Message}";
+        }
+        finally
+        {
+            isDeleting = false;
+            userToDeleteId = string.Empty;
+            userToDeleteName = string.Empty;
+        }
+    }
+}
