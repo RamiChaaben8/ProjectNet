@@ -17,30 +17,39 @@ namespace Project.Repositories
             // Handle existing articles properly to prevent tracking conflicts
             if (order.Receipt != null && order.Receipt.Any())
             {
-                // Create a new list to avoid modifying collection during enumeration
-                var trackedArticles = new List<Article>();
+                // Create a new list to store article references
+                var articleIds = order.Receipt.Select(a => a.ArticleID).ToList();
                 
-                foreach (var article in order.Receipt.ToList())
+                // Clear the receipt to avoid tracking issues with navigation properties
+                order.Receipt.Clear();
+                
+                // Fetch the articles from database without their navigation properties being tracked
+                foreach (var articleId in articleIds)
                 {
-                    // Check if the entity is already being tracked
-                    var trackedEntity = context.ChangeTracker.Entries<Article>()
-                        .FirstOrDefault(e => e.Entity.ArticleID == article.ArticleID);
+                    // Get existing tracked entity or fetch from database
+                    var trackedArticle = context.ChangeTracker.Entries<Article>()
+                        .FirstOrDefault(e => e.Entity.ArticleID == articleId)?.Entity;
                     
-                    if (trackedEntity != null)
+                    if (trackedArticle == null)
                     {
-                        // Entity is already tracked, use the tracked instance
-                        trackedArticles.Add(trackedEntity.Entity);
+                        // Fetch the article without loading navigation properties
+                        var article = await context.Articles.FindAsync(articleId);
+                        if (article != null)
+                        {
+                            // Detach the category to prevent tracking conflicts
+                            var categoryEntry = context.Entry(article).Reference(a => a.Category);
+                            if (categoryEntry.IsLoaded && article.Category != null)
+                            {
+                                context.Entry(article.Category).State = EntityState.Detached;
+                            }
+                            order.Receipt.Add(article);
+                        }
                     }
                     else
                     {
-                        // Entity is not tracked, so attach it
-                        context.Articles.Attach(article);
-                        trackedArticles.Add(article);
+                        order.Receipt.Add(trackedArticle);
                     }
                 }
-                
-                // Replace the receipt list with the properly tracked articles
-                order.Receipt = trackedArticles;
             }
             
             await context.Orders.AddAsync(order);

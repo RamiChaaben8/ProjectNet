@@ -6,3 +6,4 @@ wwwroot\uploads\articles\7bb64948-dbfb-46d6-a5fe-933ed2b41ccc.png
 wwwroot\uploads\articles\8d7926b2-6e02-4e07-8dfb-6bdfc62052d0.png
 wwwroot\uploads\articles\a9c6a658-b068-4fc3-a9a2-d0b5c9b0bd58.jpg
 wwwroot\uploads\articles\aa034c34-3698-4116-9d31-5ee087c8432d.png
+wwwroot\uploads\articles\ff212eb8-0b94-41bb-a0ed-735bcd3a9739.png

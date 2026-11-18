@@ -930,3 +930,4 @@ C:\Users\Lenovo\Downloads\projectCs2-main (1)\projectCs2-main\Project\obj\Debug\
 C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\Project\bin\Debug\net8.0\Project.staticwebassets.runtime.json
 C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\Project\bin\Debug\net8.0\dotnet-watch.json
 C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\Project\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\Project\obj\Debug\net8.0\Project.sourcelink.json

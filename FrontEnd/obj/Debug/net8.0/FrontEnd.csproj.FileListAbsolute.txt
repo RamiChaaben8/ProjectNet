@@ -3124,6 +3124,8 @@ C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\FrontEnd\obj\Debug\ne
 C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\FrontEnd\obj\Debug\net8.0\refint\FrontEnd.dll
 C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\FrontEnd\obj\Debug\net8.0\FrontEnd.pdb
 C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\FrontEnd\obj\Debug\net8.0\ref\FrontEnd.dll
-C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\FrontEnd\obj\Debug\net8.0\compressed\0fmfv21dmn-07ummm20so.gz
-C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\FrontEnd\obj\Debug\net8.0\compressed\o5vu83zqbo-tg4kzjdmi7.gz
-C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\FrontEnd\obj\Debug\net8.0\compressed\da4165w0gq-y483g06f85.gz
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\FrontEnd\obj\Debug\net8.0\FrontEnd.sourcelink.json
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\FrontEnd\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\FrontEnd\obj\Debug\net8.0\compressed\0fmfv21dmn-n1khhkw9e4.gz
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\FrontEnd\obj\Debug\net8.0\compressed\o5vu83zqbo-6zpv42h6xw.gz
+C:\Users\ramic\OneDrive\Documents\XuanZhi9\projectCs2-main\FrontEnd\obj\Debug\net8.0\compressed\da4165w0gq-xbcq8aoarg.gz

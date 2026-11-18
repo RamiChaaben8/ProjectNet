@@ -114,7 +114,7 @@ namespace Project
                 options.AddPolicy("AllowBlazorClient",
                     policy =>
                     {
-                        policy.WithOrigins("http://localhost:5276", "http://localhost:5053", "https://localhost:7053")
+                        policy.WithOrigins("http://localhost:5276", "http://localhost:5053", "https://localhost:7053" , "http://192.168.0.135:5276", "http://192.168.0.135:5053", "http://192.168.0.135:7053")
                               .AllowAnyHeader()
                               .AllowAnyMethod();
                     });

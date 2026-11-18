@@ -36,8 +36,19 @@ namespace FrontEnd
                 return new Services.OrderService(httpClient, authService);
             });
             
+            
+
             // Simple HttpClient without message handler
-            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://localhost:5053") });
+            builder.Services.AddScoped(sp =>
+            {
+                var cofiguration = sp.GetRequiredService<IConfiguration>();
+                var backendUrl = cofiguration["BackendUrl"];
+                if (string.IsNullOrEmpty(backendUrl))
+                {
+                    throw new InvalidOperationException("BackendUrl is not configured.");
+                }
+                return new HttpClient { BaseAddress = new Uri(backendUrl) };
+            });
 
             await builder.Build().RunAsync();
         }
